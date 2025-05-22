@@ -35,7 +35,7 @@ const sessionConfig={
     name:"mysession",
     secret:"thisisasecret",
     resave:false,
-    saveUnitialized:true,
+    saveUnitialized:false,
     cookie:{
         httpOnly:true,
         // secure:true,
@@ -183,10 +183,6 @@ app.use('/campgrounds/:id/reviews',reviews);
 app.set('view engine','ejs');
 app.set('views',path.join(__dirname,'views'))
 
-app.get('/',(req,res)=>{
-    // res.send("Hello from YelpifrkCamp");
-    res.render('home');
-})
 
 
 
@@ -205,8 +201,11 @@ const port = process.env.PORT || 3000;
 app.listen(port, () => {
   console.log(`Serving on port ${port}`);
 });
+
 app.get("/", (req, res) => {
+
   res.send("🎉 Campify is live!");
+  res.render('home');
 });
 // app.listen(3000,()=>{
 //     console.log('We are listening!!');
