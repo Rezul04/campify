@@ -203,8 +203,6 @@ app.listen(port, () => {
 });
 
 app.get("/", (req, res) => {
-
-  res.send("🎉 Campify is live!");
   res.render('home');
 });
 // app.listen(3000,()=>{
