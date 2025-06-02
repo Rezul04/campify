@@ -5,7 +5,6 @@ const express=require('express');
 const helmet=require('helmet');
 const MongoStore = require('connect-mongo');
 
-
 const app=express();
 const bodyParser = require("body-parser");
 const methodOverride=require('method-override');
