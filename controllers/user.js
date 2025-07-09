@@ -28,7 +28,7 @@ module.exports.registerNewUser=catchAsync(async(req,res)=>{
     req.login(regUser,err=>{
         if(err) return next(err)
         // console.log(regUser);
-        req.flash('success',"welcome to yelp camp");
+        req.flash('success',"welcome to Campify");
          res.redirect('/campgrounds');
         
     })
